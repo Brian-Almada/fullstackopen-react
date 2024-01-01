@@ -5,16 +5,16 @@ const Content = (props) => {
     return (
         <div>
             <p>
-                {props.parts[0].name} {props.parts[0].exercises}
+                {props.course[0].name} {props.course[0].exercises}
             </p>
             <p>
-                {props.parts[1].name} {props.parts[1].exercises}
+                {props.course[1].name} {props.course[1].exercises}
             </p>
             <p>
-                {props.parts[2].name} {props.parts[2].exercises}
+                {props.course[2].name} {props.course[2].exercises}
             </p>
         </div>
-    )
+            )
 }
 
 export default Content
