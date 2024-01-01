@@ -2,18 +2,16 @@ const Content = (props) => {
 
     console.log(props)
 
-    
-
     return (
         <div>
             <p>
-                {props.part1.name} {props.part1.exercises}
+                {props.parts[0].name} {props.parts[0].exercises}
             </p>
             <p>
-                {props.part2.name} {props.part2.exercises}
+                {props.parts[1].name} {props.parts[1].exercises}
             </p>
             <p>
-                {props.part3.name} {props.part3.exercises}
+                {props.parts[2].name} {props.parts[2].exercises}
             </p>
         </div>
     )
