@@ -1,10 +1,6 @@
 import { useState } from 'react'
 
-const Display = (props) => {
-    return(
-        <div>{props.counter}</div>
-    )
-}
+const Display = ({counter}) => <div>{counter}</div>
 
 const Button = (props) => {
     return(
@@ -17,10 +13,19 @@ const Button = (props) => {
 const Contador = () => {
 
     const [counter, setCounter] = useState(0)
-    const counterPlus = () => setCounter(counter + 1)
-    const counterDecreace = () => setCounter(counter - 1)
-
-    const backToZero = () => setCounter(0)
+    console.log('rendering with counter value', counter)
+    const counterPlus = () => {
+        console.log('increasing, value before', counter)
+        setCounter(counter + 1)
+    }
+    const counterDecreace = () => {
+        console.log('decreasing, value before', counter)
+        setCounter(counter - 1)
+    }
+    const backToZero = () => {
+        console.log('resetting to zero, value before', counter)
+        setCounter(0)
+    }
 
     return (
         <div>
