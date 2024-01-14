@@ -4,6 +4,7 @@ const Unicafe = () => {
     const [good, setGood] = useState(0)
     const [neutral, setNeutral] = useState(0)
     const [bad, setBad] = useState(0)
+    const all = good + neutral + bad
 
     return (
         <>
@@ -16,7 +17,7 @@ const Unicafe = () => {
         <p>good {good}</p>
         <p>neutral {neutral}</p>
         <p>bad {bad}</p>
-        <p>all {good + neutral + bad}</p>
+        <p>all {all}</p>
         </>
     )
 
