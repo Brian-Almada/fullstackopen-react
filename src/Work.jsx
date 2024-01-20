@@ -13,16 +13,21 @@ const Work = () => {
     ]
 
     const [selected, setSelected] = useState(anecdotes.slice())
-    const points = [0, 0, 0, 0, 0, 0, 0, 0]
-    const copy = [...points]
-
+    const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0))
     const randomArray = () => setSelected(Math.floor(Math.random() * anecdotes.length))
+
+    const VoteForAnecdote = () => {
+        const newVotes = [...votes]
+        newVotes[selected] =+ 1
+        setSelected(newVotes)
+    }
 
     return (
         <div>
             <p>{anecdotes[selected]}</p>
+            <p>has {votes[selected]} votes</p>
+            <button onClick={VoteForAnecdote}>Vote</button>
             <button onClick={randomArray}>Next anecdote</button>
-            <button onClick={}>Vote</button>
         </div>
     )
 }
