@@ -18,7 +18,7 @@ const Work = () => {
 
     const VoteForAnecdote = () => {
         const newVotes = [...votes];
-        newVotes[selected] =+ 1;
+        newVotes[selected] = newVotes[selected] + 1;
         setVotes(newVotes)
     }
 
