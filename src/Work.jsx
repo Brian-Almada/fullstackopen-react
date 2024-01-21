@@ -17,9 +17,9 @@ const Work = () => {
     const randomArray = () => setSelected(Math.floor(Math.random() * anecdotes.length))
 
     const VoteForAnecdote = () => {
-        const newVotes = [...votes]
-        newVotes[selected] =+ 1
-        setSelected(newVotes)
+        const newVotes = [...votes];
+        newVotes[selected] =+ 1;
+        setVotes(newVotes)
     }
 
     return (
