@@ -11,10 +11,16 @@ const animals = [
     { name: 'Meridio', specie: 'dog'}
 ]
 
-let dogs = []
+let dogs = animals.filter((animal) => animal.specie === 'dog')
+
+
+
+
+
+/*let dogs = []
 for (let i = 0; i < animals.length; i++) {
     if (animals[i].specie === 'dog')
         dogs.push(animals[i])
 }
 
-console.log(dogs);
+console.log(dogs);*/
