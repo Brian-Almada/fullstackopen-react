@@ -14,7 +14,7 @@ const animals = [
 let isDog = (animal) => animal.specie === 'dog'
 
 let dogs = animals.filter(isDog)
-
+let otherAnimals = animals.reject(isDog)
 
 /*let dogs = []
 for (let i = 0; i < animals.length; i++) {
