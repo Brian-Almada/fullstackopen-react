@@ -11,10 +11,9 @@ const animals = [
     { name: 'Meridio', specie: 'dog'}
 ]
 
-let dogs = animals.filter((animal) => animal.specie === 'dog')
+let isDog = (animal) => animal.specie === 'dog'
 
-
-
+let dogs = animals.filter(isDog)
 
 
 /*let dogs = []
