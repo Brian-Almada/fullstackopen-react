@@ -11,6 +11,8 @@ const animals = [
     { name: 'Meridio', specie: 'dog'}
 ]
 
+// Higher order functions => Filter //
+
 let isDog = (animal) => animal.specie === 'dog'
 
 let dogs = animals.filter(isDog)
@@ -23,3 +25,16 @@ for (let i = 0; i < animals.length; i++) {
 }
 
 console.log(dogs);*/
+//-----------------------------------------------------------------//
+
+// Higher order functions => Map //
+
+let names = animals.map((animal) => animal.name)
+
+
+/*let names = []
+for (let i = 0; i < animals.length; i++) {
+    return names.push(animals[i].name)
+}
+*/
+console.log(names)
