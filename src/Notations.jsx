@@ -1,10 +1,10 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom'
 
 const notes = [
     {
         id: 1,
-        content: 'HTML is easy',
+        content: 'HTML in easy',
         date: '2019-05-30T17:30:31.098Z',
         important: true
     },
@@ -22,8 +22,9 @@ const notes = [
     }
 ]
 
-const Note = props => {
-    const { notes } = props
+const Notex = (props) => {
+    const {notes} = props
+
     return (
         <div>
             <h1>Notes</h1>
@@ -36,5 +37,6 @@ const Note = props => {
     )
 }
 
+ReactDOM.render(<Notex notes={notes} />, document.getElementById('root'))
 
-export default Note
+console.log(notes)
