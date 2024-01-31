@@ -30,7 +30,7 @@ const Notex = (props) => {
             <h1>Notes</h1>
             <ul>
                 {notes.map(note => (
-                    <li>{note.content}</li>
+                    <li key={note.id}>{note.content}</li>
                 ))}
             </ul>
         </div>
@@ -40,3 +40,5 @@ const Notex = (props) => {
 ReactDOM.render(<Notex notes={notes} />, document.getElementById('root'))
 
 console.log(notes)
+
+//para renderizar hay que cambiar la ruta de src en index.html
