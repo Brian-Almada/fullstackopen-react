@@ -19,7 +19,7 @@ const Listado = () => {
     const mapeador = () => {
         return jsonNames.map((value, index) =>{
             return (
-                <div>
+                <div key={value.id}>
                     <p>{value.name}</p>
                 </div>
             )
