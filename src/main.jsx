@@ -5,7 +5,7 @@ import Clicker from './Clicks.jsx'
 import Callbacks from './callbacks.jsx'
 import Unicafe from './Unicafe.jsx'
 import Work from './Work.jsx'
+import Listado from './Listado.jsx'
 
 
-
-ReactDOM.createRoot(document.getElementById('root')).render()
+ReactDOM.createRoot(document.getElementById('root')).render(<Listado />)
