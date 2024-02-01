@@ -16,16 +16,19 @@ const jsonNames = [
 ]
 
 const Listado = () => {
+    const mapeador = () => {
+        return jsonNames.map((value, index) =>{
+            return (
+                <div>
+                    <p>{value.name}</p>
+                </div>
+            )
+        })
+    }
     return (
         <div>
             <h1>Listado</h1>
-            {jsonNames.map((value, index) =>{
-                return (
-                    <div>
-                        <p>{value.name}</p>
-                    </div>
-                )
-            })}
+            {mapeador()}
         </div>
     )
 }
