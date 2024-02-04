@@ -1,5 +1,4 @@
-import React from "react";
-import ReactDOM from 'react-dom'
+import React from 'react'
 import Note from './components/Note'
 
 const notes = [
@@ -37,8 +36,6 @@ const Notex = ({ notes }) => {
     )
 }
 
-ReactDOM.render(<Notex notes={notes} />, document.getElementById('root'))
-
 console.log(notes)
-
+export default Notex
 //para renderizar hay que cambiar la ruta de src en index.html
