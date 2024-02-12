@@ -6,6 +6,12 @@ import Note from './components/Note'
 const Notex = (props) => {
     const [notes, setNotes] = useState(props.notes)
 
+    const addNote = (e) => {
+        e.preventDefault(
+            console.log('button clicked', e.target)
+        )
+    }
+
     return (
         <div>
             <h1>Notes</h1>
@@ -14,6 +20,10 @@ const Notex = (props) => {
                     <Note key={note.id} note={note}/>
                 )}
             </ul>
+            <form onSubmit={addNote}>
+                <input />
+                <button type='submit'>save</button>
+            </form>
         </div>
     )
 }
