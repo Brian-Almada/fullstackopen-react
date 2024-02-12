@@ -1,8 +1,10 @@
 import React from 'react'
+import { useState } from 'react'
 import Note from './components/Note'
 
 
-const Notex = ({notes}) => {
+const Notex = (props) => {
+    const [notes, setNotes] = useState(props.notes)
 
     return (
         <div>
@@ -17,4 +19,3 @@ const Notex = ({notes}) => {
 }
 
 export default Notex
-//para renderizar hay que cambiar la ruta de src en index.html

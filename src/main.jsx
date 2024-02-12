@@ -8,4 +8,4 @@ import Work from './Work.jsx'
 import Listado from './Listado.jsx'
 import NoteApp from './NoteApp.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+ReactDOM.createRoot(document.getElementById('root')).render(<NoteApp />)
