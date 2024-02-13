@@ -5,6 +5,7 @@ import Note from './components/Note'
 
 const Notex = (props) => {
     const [notes, setNotes] = useState(props.notes)
+    const [newNote, setNewNote] = useState('a new note...')
 
     const addNote = (e) => {
         e.preventDefault(
@@ -21,7 +22,7 @@ const Notex = (props) => {
                 )}
             </ul>
             <form onSubmit={addNote}>
-                <input />
+                <input value={newNote}/>
                 <button type='submit'>save</button>
             </form>
         </div>
