@@ -13,6 +13,11 @@ const Notex = (props) => {
         )
     }
 
+    const handleNoteChange = (event) => {
+        console.log(event.target.value)
+        setNewNote(event.target.value)
+      }
+
     return (
         <div>
             <h1>Notes</h1>
@@ -22,7 +27,11 @@ const Notex = (props) => {
                 )}
             </ul>
             <form onSubmit={addNote}>
-                <input value={newNote}/>
+                <input
+                    value={newNote}
+                    onChange={handleNoteChange}
+                />
+
                 <button type='submit'>save</button>
             </form>
         </div>
