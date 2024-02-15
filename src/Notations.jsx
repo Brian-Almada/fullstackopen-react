@@ -8,15 +8,18 @@ const Notex = (props) => {
     const [newNote, setNewNote] = useState('a new note...')
 
     const addNote = (e) => {
-        e.preventDefault(
-            console.log('button clicked', e.target)
-        )
+        e.preventDefault()
+        const noteObject = {
+            content: newNote,
+            important: Math.random() > 0.5,
+            id: notes.length + 1
+        }
     }
 
     const handleNoteChange = (event) => {
         console.log(event.target.value)
         setNewNote(event.target.value)
-      }
+    }
 
     return (
         <div>
