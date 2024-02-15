@@ -14,6 +14,9 @@ const Notex = (props) => {
             important: Math.random() > 0.5,
             id: notes.length + 1
         }
+
+        setNotes(notes.concat(noteObject))
+        setNewNote('')
     }
 
     const handleNoteChange = (event) => {
