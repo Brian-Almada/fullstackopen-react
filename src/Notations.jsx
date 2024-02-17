@@ -32,6 +32,11 @@ const Notex = (props) => {
     return (
         <div>
             <h1>Notes</h1>
+            <div>
+                <button onClick= {() => setShowAll(!showAll)}>
+                    show {showAll ? 'important' : 'all'}
+                </button>
+            </div>
             <ul>
                 {noteToShow.map(note =>
                     <Note key={note.id} note={note}/>
