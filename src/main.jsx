@@ -7,5 +7,6 @@ import Unicafe from './Unicafe.jsx'
 import Work from './Work.jsx'
 import Listado from './Listado.jsx'
 import NoteApp from './NoteApp.jsx'
+import Phonebook from './Phonebook.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<NoteApp />)
+ReactDOM.createRoot(document.getElementById('root')).render(<Phonebook />)
