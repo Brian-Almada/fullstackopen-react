@@ -6,6 +6,12 @@ const Phonebook = () => {
     ])
     const [newName, setNewName] = useState('')
 
+    const addPerson = (e) => {
+        e.preventDefault()
+        setPersons(persons.concat({name: newName}))
+    }
+
+
     const handleInputChange = (e) => {
         e.preventDefault()
         setNewName(e.target.value)
@@ -27,6 +33,7 @@ const Phonebook = () => {
                 </div>
             </form>
             <h2>Numbers</h2>
+            {persons.map(person => <p key={person.name}>{person.name}</p>)}
             <div>debug: {newName}</div>
         </div>
     )
