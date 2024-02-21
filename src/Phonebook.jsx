@@ -1,16 +1,19 @@
 import { useState } from "react";
 
+const initialPersons = [
+    {
+        name: 'Arto Hellas'
+    }
+]
+
 const Phonebook = () => {
-    const [persons, setPersons] = useState([
-        {name: 'Arto Hellas'},
-    ])
+    const [persons, setPersons] = useState(initialPersons)
     const [newName, setNewName] = useState('')
 
     const addPerson = (e) => {
         e.preventDefault()
         setPersons(persons.concat({name: newName}))
     }
-
 
     const handleInputChange = (e) => {
         e.preventDefault()
@@ -20,7 +23,7 @@ const Phonebook = () => {
     return (
         <div>
             <h2>Phonebook</h2>
-            <form>
+            <form onSubmit={addPerson}>
                 <div>
                     name:
                     <input
