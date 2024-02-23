@@ -9,6 +9,7 @@ const initialPersons = [
 const Phonebook = () => {
     const [persons, setPersons] = useState(initialPersons)
     const [newName, setNewName] = useState('')
+    const [newNumber, setNewNumber] = useState('')
 
     const addPerson = (e) => {
         e.preventDefault()
@@ -24,6 +25,11 @@ const Phonebook = () => {
         setNewName(e.target.value)
     }
 
+    const handleInputNumber = (e) => {
+        e.preventDefault()
+        setNewNumber(e.target.value)
+    }
+
     return (
         <div>
             <h2>Phonebook</h2>
@@ -37,7 +43,10 @@ const Phonebook = () => {
                 </div>
                 <div>
                     number:
-                    <input />
+                    <input
+                        value={newNumber}
+                        onChange={handleInputNumber}
+                    />
                 </div>
                 <div>
                     <button type="submit">add</button>
