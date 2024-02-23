@@ -36,6 +36,10 @@ const Phonebook = () => {
                     />
                 </div>
                 <div>
+                    number:
+                    <input />
+                </div>
+                <div>
                     <button type="submit">add</button>
                 </div>
             </form>
