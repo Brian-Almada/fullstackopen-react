@@ -2,7 +2,9 @@ import { useState } from "react";
 
 const initialPersons = [
     {
-        name: 'Arto Hellas'
+        name: 'Arto Hellas',
+        number: 157187777,
+        id: 1
     }
 ]
 
@@ -16,7 +18,7 @@ const Phonebook = () => {
         if (persons.some(person => person.name === newName)) {
             alert(`${newName} is already added to phonebook`)
         } else {
-            setPersons(persons.concat({name: newName}))
+            setPersons(persons.concat({name: newName}, {number: newNumber}))
         }
     }
 
@@ -53,7 +55,7 @@ const Phonebook = () => {
                 </div>
             </form>
             <h2>Numbers</h2>
-            {persons.map(person => <p key={person.name}>{person.name}</p>)}
+            {persons.map(person => <p key={person.id}>{person.name} {person.number}</p>)}
             <div>debug: {newName}</div>
         </div>
     )
