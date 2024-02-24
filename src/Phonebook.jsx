@@ -11,6 +11,7 @@ const Phonebook = () => {
     const [persons, setPersons] = useState(initialPersons)
     const [newName, setNewName] = useState('')
     const [newNumber, setNewNumber] = useState('')
+    const [filterPerson, setFilterPerson] = useState('')
 
     const addPerson = (e) => {
         e.preventDefault()
@@ -23,6 +24,10 @@ const Phonebook = () => {
         }
     }
 
+    const searchShowPerson = filterPerson
+    ? persons.filter(person => person.name.includes((filterPerson)))
+    : persons
+
     const handleInputChange = (e) => {
         e.preventDefault()
         setNewName(e.target.value)
@@ -33,13 +38,21 @@ const Phonebook = () => {
         setNewNumber(e.target.value)
     }
 
+    const handleInputFilter = (e) => {
+        e.preventDefault()
+        setFilterPerson(e.target.value)
+    }
+
     return (
         <div>
             <h1>Phonebook</h1>
 
             <div>
                 filter shown with:
-                <input />
+                <input
+                    value= {filterPerson}
+                    onChange={handleInputFilter}
+                />
             </div>
 
             <h2>Add a new</h2>
@@ -64,7 +77,7 @@ const Phonebook = () => {
                 </div>
             </form>
             <h2>Numbers</h2>
-            {persons.map(person => <p key={person.id}>{person.name} {person.number}</p>)}
+            {searchShowPerson.map(person => <p key={person.id}>{person.name} {person.number}</p>)}
         </div>
     )
 }
