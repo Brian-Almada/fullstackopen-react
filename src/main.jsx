@@ -8,5 +8,6 @@ import Work from './Work.jsx'
 import Listado from './Listado.jsx'
 import NoteApp from './NoteApp.jsx'
 import Phonebook from './Phonebook.jsx'
+import PromiseAxios from './promises.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<Phonebook />)
+ReactDOM.createRoot(document.getElementById('root')).render(<PromiseAxios />)
