@@ -10,4 +10,4 @@ import NoteApp from './NoteApp.jsx'
 import Phonebook from './Phonebook.jsx'
 import PromiseAxios from './promises.jsx'
 
-ReactDOM.createRoot(document.getElementById('root')).render(<NoteApp />)
+ReactDOM.createRoot(document.getElementById('root')).render(<Phonebook />)
